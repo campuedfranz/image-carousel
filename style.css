@@ -1,0 +1,104 @@
+.carousel {
+    /* setting properties for the whole carousel section */
+    /* background-color: yellow; */
+    position: relative  ;
+    height: 750px;
+    width: 90%;
+    /* center the carousel section */
+    margin: 0 auto;
+
+    /* carousel-track-slider */
+    .carousel-track-container{
+        /* background-color: red; */
+        height: 100%;
+        position: relative;
+        /* hide side by side prev and next slide */
+        overflow: hidden;
+
+        .carousel-track{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            position: relative;
+            height: 100%;
+            transition: transform 250ms ease-in;
+
+            .carousel-slide{
+                /* relative to their parent - No space is created for the element in the page layout. 
+                The values of left, top, bottom and right determine the final position of the element. */
+                position: absolute; /* will cause stacking of slides */
+                top: 0;
+                bottom: 0;
+                width: 100%;
+
+
+                .carousel-slide-img{
+                    width: 100%;
+                    height: 100%; /* need to be 100% so that object-fit works */
+                    object-fit: cover;
+
+                }
+            }
+        }
+    }
+
+    /* carousel-next-prev-buttons */
+    .carousel-button{
+        position: absolute;
+        top: 50%;
+        height: 75px;
+        width: 75px;
+        border: 0;
+        border-radius: 50%;
+        background: #F6F6F6;
+        opacity: .25;
+
+        cursor: pointer;
+
+
+        /* center item at 50% of  y-axis*/
+        transform: translateY(-50%);
+
+        .button-img{
+            width: 50px;
+            opacity: .5;
+
+        }
+    }
+
+    .is-hidden {
+        display: none;
+    }
+
+    .button-left{
+        left: 3%;
+    }
+
+    .button-right{
+        right: 3%;
+    }
+
+    /* carousel-navigation */
+    .carousel-nav{
+        display: flex;
+        justify-content: center;
+
+        .carousel-indicator{
+            background-color: #F6F6F6;
+            opacity: .75;
+            width: 10px;
+            height: 10px;
+            border: 0;
+            border-radius: 20px;
+
+            position: relative;
+            top: -30px;
+            margin: 0 30px;
+            padding: 0;
+        }
+
+        .active{
+            width: 30px;
+        }
+    }
+}

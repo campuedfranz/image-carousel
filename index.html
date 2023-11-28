@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla JavaScript Carousel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="carousel">
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide current-slide">
+                        <img src="images/1.png" alt="" class="carousel-slide-img">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="images/2.png" alt="" class="carousel-slide-img">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="images/3.png" alt="" class="carousel-slide-img">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="images/4.png" alt="" class="carousel-slide-img">
+                    </li>
+                    <li class="carousel-slide">
+                        <img src="images/5.png" alt="" class="carousel-slide-img">
+                    </li>
+                </ul>
+            </div>
+            <button class="carousel-button button-left is-hidden">
+                <img src="images/left-arrow.svg" alt="" class="button-img">
+            </button>
+            <button class="carousel-button button-right">
+                <img src="images/right-arrow.svg" alt="" class="button-img">
+            </button>
+
+            <div class="carousel-nav">
+                <button class="carousel-indicator active"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+                <button class="carousel-indicator"></button>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
